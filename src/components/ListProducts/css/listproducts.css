@@ -1,0 +1,54 @@
+:root {
+    --rose: #EA7C69;
+    --blanco: #fff;
+    --dark: #1F1D2B;
+}
+p{
+    margin: .25rem;
+}
+.item-list-container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.item-list-product{
+    width: 22.3%;
+    margin: .5rem;
+    position: relative;
+    text-align: center;
+    background-color: var(--dark);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.item-list-product img{
+    width: 25%;
+}
+.item-list-product__text{
+    width: 80%;
+    margin: auto;
+}
+.container-quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-quantity button{
+    background-color: var(--rose);
+    border-radius: 50%;
+    color: var(--blanco);
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    margin: 0 .5rem;
+    font-size: 1.2rem;
+} 
+
+.container-quantity button:hover{
+    opacity: .8;
+    cursor: pointer;
+}
