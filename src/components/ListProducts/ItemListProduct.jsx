@@ -24,7 +24,7 @@ export const ItemListProduct = ({img, title, price, stock, agregarProducto}) =>{
                 <p>{contador}</p>
                 <button onClick={decrementar}>-</button>
             </div>
-            <button onClick={()=>(agregarProducto(contador))}>Agregar al carrito</button>
+            <button className="buttonAddToCart" onClick={()=>(agregarProducto(contador))}>Agregar al carrito</button>
         </div>
     )
 }

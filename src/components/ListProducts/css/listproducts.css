@@ -52,3 +52,20 @@ p{
     opacity: .8;
     cursor: pointer;
 }
+.buttonAddToCart{
+    appearance: none;
+    border: 2px solid var(--rose);
+    border-radius: 8px;
+    color: var(--rose);
+    outline: none;
+    background-color: transparent;
+    padding: .5rem;
+    margin-top: 1.5rem;
+    transition: all .3s linear;
+    cursor: pointer;
+    font-weight: 600;
+}
+.buttonAddToCart:hover{
+    background-color: var(--rose);
+    color: var(--blanco);
+}

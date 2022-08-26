@@ -8,25 +8,41 @@ import product6 from "../../Assets/product-6.png"
 import product7 from "../../Assets/product-7.png"
 import product8 from "../../Assets/product-8.png"
 import product9 from "../../Assets/product-9.png"
-import { useState } from "react"
+import { useState, useEffect} from "react"
 import "./css/listproducts.css"
+import { toBeRequired } from "@testing-library/jest-dom/dist/matchers"
 export const ItemListContainer = () =>{
     const [cantidadProductos, setNumero] = useState(0);
+    const [productos, setProductos] = useState([]);
     const agregar = (contador) =>{
-        console.log("contador",contador)
-        console.log("cantidadProductos",cantidadProductos)
         setNumero(contador + cantidadProductos);
     }
+
+    const obtenerProductos = async() =>{
+        
+        fetch("https://6308241546372013f576e16e.mockapi.io/api/foodproducts/products")
+        .then((res) =>{
+            return res.json();
+        })
+        .then((productos) =>{
+            setProductos(productos);
+        })
+    }
+    useEffect(() => {
+        obtenerProductos();
+    }, [])
     return (
         <div>
             <h1>Cantidad de productos en el carrito {cantidadProductos}</h1>
             <div className="item-list-container">
-                <ItemListProduct img={product1} title="Spicy seasoned seafood noodles" price={1600} stock={10} agregarProducto={agregar}/>
-                <ItemListProduct img={product2} title="Salted Pasta with mushroom sauce" price={1600} stock={10} agregarProducto={agregar}/>
-                <ItemListProduct img={product3} title="Beef dumpling in hot and sour soup" price={1600} stock={10} agregarProducto={agregar}/>
-                <ItemListProduct img={product4} title="Healthy noodle with spinach leaf" price={1600} stock={10} agregarProducto={agregar}/>
-                <ItemListProduct img={product5} title="Hot spicy fried rice with omelet" price={1600} stock={10} agregarProducto={agregar}/>
-                <ItemListProduct img={product6} title="Spicy instant noodle with special omelette" price={1600} stock={10} agregarProducto={agregar}/>
+                {
+                    productos.map((producto)=>{
+                        const loadImage = imageName => (require(`../../Assets/product-${imageName}.png`).default);
+                        return(
+                            <ItemListProduct img={loadImage(producto.img)} title={producto.title} price={producto.price} stock={producto.stock} agregarProducto={agregar}/>
+                        )
+                    })
+                }
             </div>
         </div>
     )
