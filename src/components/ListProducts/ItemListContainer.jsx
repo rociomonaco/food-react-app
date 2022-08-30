@@ -19,7 +19,9 @@ export const ItemListContainer = () =>{
         })
     }
     useEffect(() => {
-        obtenerProductos();
+        setTimeout(()=>{
+            obtenerProductos();
+        },2000)
     }, [])
     return (
         <div>
@@ -28,7 +30,7 @@ export const ItemListContainer = () =>{
                 {
                     productos.map((producto)=>{
                         return(
-                            <ItemListProduct img={producto.img} title={producto.title} price={producto.price} stock={producto.stock} agregarProducto={agregar}/>
+                            <ItemListProduct  title={producto.title} price={producto.price} stock={producto.stock} agregarProducto={agregar}/>
                         )
                     })
                 }

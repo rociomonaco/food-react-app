@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from "./components/NavBar/NavBar"
 import {ItemListContainer} from "./components/ListProducts/ItemListContainer"
+import {ItemDetailContainer} from "./components/DetailProduct/ItemsDetailContainer"
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <NavBar/>
       </header>
       <ItemListContainer/>
+      <ItemDetailContainer/>
     </div>
   );
 }

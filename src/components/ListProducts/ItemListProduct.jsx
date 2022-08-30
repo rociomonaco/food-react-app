@@ -15,14 +15,11 @@ export const ItemListProduct = ({img, title, price, stock, agregarProducto}) =>{
             setContador(contador -1);
         }
     }
-   
-   
-console.log(img)
-console.log(loadImage)
+
     return (
         <div className="item-list-product">
             <div>
-          <img src={loadImage(img)}/>
+                <img src=""/>
             </div>
             <p className="item-list-product__text">{title}</p>
             <p>${price}</p>
