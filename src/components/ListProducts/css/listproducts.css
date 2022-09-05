@@ -52,7 +52,7 @@ p{
     opacity: .8;
     cursor: pointer;
 }
-.buttonAddToCart{
+.buttonCart{
     appearance: none;
     border: 2px solid var(--rose);
     border-radius: 8px;
@@ -65,7 +65,7 @@ p{
     cursor: pointer;
     font-weight: 600;
 }
-.buttonAddToCart:hover{
+.buttonCart:hover{
     background-color: var(--rose);
     color: var(--blanco);
 }

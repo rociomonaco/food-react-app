@@ -1,0 +1,20 @@
+:root {
+    --rose: #EA7C69;
+    --blanco: #fff;
+    --dark: #1F1D2B;
+}
+.container-filters ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+.link-filter{
+    text-decoration: none;
+    color: var(--rose);
+    margin: 0 1rem;
+    font-weight: 600;
+}
+.link-active{
+    text-decoration: underline;
+    color: #f9c4bb;
+}
