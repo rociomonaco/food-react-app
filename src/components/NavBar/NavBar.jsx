@@ -10,7 +10,7 @@ function NavBar(){
             <div className="NavBarSection1">
                 <Link to="/"><img src={logo} alt="Logo"/></Link>
                 <Link to="/" className="NavBar__item NavBar__item--active"><FontAwesomeIcon icon={faHouse} /></Link>
-                <CartWidget icono={faCartArrowDown}></CartWidget>
+                <Link to="cart"><CartWidget icono={faCartArrowDown}></CartWidget></Link>
             </div>
             <div className="NavBarSection2">
                 <Link to="/" className="NavBar__item"><FontAwesomeIcon icon={faArrowRightFromBracket} /></Link>

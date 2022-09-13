@@ -50,3 +50,9 @@
     background-color: var(--rose);
     color: var(--blanco);
 }
+.containerButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom"
 
 import { useState, useEffect} from "react"
 import "./css/listproducts.css"
+import {CartFilter} from "../CartFilter/CartFilter"
+
 
 export const ItemListContainer = () =>{
     const {typeOfProduct} = useParams();
@@ -34,6 +36,8 @@ export const ItemListContainer = () =>{
     
     return (
         <div>
+            <CartFilter/>
+
             <div className="item-list-container">
                 {
                     productos.map((producto)=>{

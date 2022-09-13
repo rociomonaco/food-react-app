@@ -25,7 +25,7 @@ export const ItemDetailContainer = () =>{
 
     return(
         <div className="itemsDetailContainer">
-            <ItemDetail id={producto.id} title={producto.title} detail={producto.detail} key={producto.id} stock={producto.stock} price={producto.price} obtenerContadorDeProductos={obtenerContadorDeProductos}/>
+            <ItemDetail  key={producto.id} item={producto}/>
         </div>
     )
 

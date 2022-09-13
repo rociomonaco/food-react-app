@@ -53,17 +53,19 @@ p{
     cursor: pointer;
 }
 .buttonCart{
-    appearance: none;
+    text-decoration: none;
     border: 2px solid var(--rose);
     border-radius: 8px;
     color: var(--rose);
-    outline: none;
     background-color: transparent;
     padding: .5rem;
-    margin-top: 1.5rem;
     transition: all .3s linear;
     cursor: pointer;
     font-weight: 600;
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 1.5rem;
 }
 .buttonCart:hover{
     background-color: var(--rose);

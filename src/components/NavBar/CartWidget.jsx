@@ -1,6 +1,17 @@
+import "./css/navbar.css";
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export const CartWidget = ({icono}) =>{
+    const {getQuantityProducts} = useContext(CartContext)
     return (
-        <a className="NavBar__item"><FontAwesomeIcon icon={icono} /> <span className="ItemCart">5</span></a>
+        <div className="NavBar__item"><FontAwesomeIcon icon={icono} /> 
+        {
+
+            getQuantityProducts() > 0 &&
+            <span className="ItemCart">{getQuantityProducts()}</span>
+
+        }
+        </div>
     )
 }
