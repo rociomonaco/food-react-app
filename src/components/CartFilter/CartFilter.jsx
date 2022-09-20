@@ -6,7 +6,7 @@ export const CartFilter = () =>{
         <div className="container-filters">
             <ul className="list-filters">
                 <li className="item-filter">
-                    <NavLink className={({isActive}) => isActive ? "link-filter link-active" : "link-filter"} to="products">All</NavLink>
+                    <NavLink className={({isActive}) => isActive ? "link-filter link-active" : "link-filter"} to="products/">All</NavLink>
                 </li>
                 <li className="item-filter">
                     <NavLink className={({isActive}) => isActive ? "link-filter link-active" : "link-filter"} to="products/soup">Soup</NavLink>

@@ -3,8 +3,9 @@ import { useParams } from "react-router-dom"
 
 import { useState, useEffect} from "react"
 import "./css/listproducts.css"
-import {CartFilter} from "../CartFilter/CartFilter"
-
+import { CartFilter } from "../CartFilter/CartFilter"
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../../utils/firebase"
 
 export const ItemListContainer = () =>{
     const {typeOfProduct} = useParams();
@@ -15,18 +16,25 @@ export const ItemListContainer = () =>{
     }
 
     const obtenerProductos = async() =>{
-        fetch("https://6308241546372013f576e16e.mockapi.io/api/foodproducts/products")
-        .then((res) =>{
-            return res.json();
-        })
-        .then((productos) =>{
+        try{
+            let queryRef = "";
             if(!typeOfProduct){
-                setProductos(productos);
+                queryRef = collection(db, "items");
             }else{
-                const filterProducts = productos.filter(item => item.category === typeOfProduct);
-                setProductos(filterProducts);
+                queryRef = query(collection(db, "items"), where("category", "==", typeOfProduct));
             }
-        })
+            const response = await getDocs(queryRef);
+            const datos = response.docs.map(doc => {
+                const newDoc = {
+                    ...doc.data(),
+                    id:doc.id
+                }
+                return newDoc;
+            });
+            setProductos(datos);
+        }catch(error){
+            console.log(error);
+        }
     }
     useEffect(() => {
         setTimeout(()=>{
