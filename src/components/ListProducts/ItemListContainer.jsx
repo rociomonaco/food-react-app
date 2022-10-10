@@ -50,7 +50,7 @@ export const ItemListContainer = () =>{
                 {
                     productos.map((producto)=>{
                         return(
-                            <ItemListProduct key={producto.id} id={producto.id} title={producto.title} price={producto.price} stock={producto.stock} agregarProducto={agregar}/>
+                            <ItemListProduct key={producto.id} id={producto.id} title={producto.title} price={producto.price} stock={producto.stock} img={producto.img} agregarProducto={agregar}/>
                         )
                     })
                 }

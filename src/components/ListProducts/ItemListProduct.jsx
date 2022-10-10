@@ -6,7 +6,7 @@ export const ItemListProduct = ({id, img, title, price, stock, agregarProducto})
     return (
         <div className="item-list-product">
             <div>
-                <img src=""/>
+                <img src={img}/>
             </div>
             <p className="item-list-product__text">{title}</p>
             <p>${price}</p>

@@ -6,7 +6,7 @@ export const CartItem = ({item}) =>{
     return(
         <div className="itemCart">
             <div className="itemCart__containerImg">
-                {/* img */}
+                <img src={item.img} />
             </div>
 
             <div>

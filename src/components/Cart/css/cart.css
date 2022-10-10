@@ -48,3 +48,33 @@ button{
 button:hover{
     opacity: .8;
 }
+.formContainer{
+    margin-top: 3rem;
+}
+.formContainer p{
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: #EA7C69;
+    margin-bottom: .7rem;
+}
+.formContainer form{
+    display: flex;
+    flex-direction: column;
+}
+.formContainer form input{
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+.formContainer form button{
+    background-color: #EA7C69;
+    border-radius: 8px;
+    color: #fff;
+    padding: .5rem;
+}
+.formContainer form button:hover{
+    opacity: .8;
+    transition: all .3s ease-in-out;
+}

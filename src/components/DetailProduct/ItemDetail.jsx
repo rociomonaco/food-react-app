@@ -25,7 +25,7 @@ export const ItemDetail = ({item}) =>{
     return(
         <div className="itemDetailContainer">
             <div className="itemDetail__containerImg">
-                {/* img */}
+                <img src={item.img} />
             </div>
 
             <div>
