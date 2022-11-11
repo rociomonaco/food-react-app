@@ -35,7 +35,7 @@ export const CartContainer = () =>{
         }
         </>
         :
-        <p class="stateCart">No products in cart</p>
+        <p className="stateCart">No products in cart</p>
 
         
     )

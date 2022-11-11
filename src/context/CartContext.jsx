@@ -5,9 +5,7 @@ export const CartContext = createContext();
 
 export const CartProvider = ({children}) =>{
     const [productsCart, setProductsCart] = useState([]);    
-    
     const addProduct = (product, count)=>{
-        console.log(product.quantity)
         let newListCart = [...productsCart];
         if(!isInCart(product.id)){
             const newProduct = {...product, quantity:count, totalPrice: count*product.price};

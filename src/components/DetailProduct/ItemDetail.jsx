@@ -37,7 +37,7 @@ export const ItemDetail = ({item}) =>{
                     <p>{contador}</p>
                     <button onClick={decrementar}>-</button>
                 </div>
-                <div class="containerButtons">
+                <div className="containerButtons">
                     <button className="buttonAddToCart" onClick={()=>agregarProducto(contador)}>Agregar al carrito</button>
                     {
                         quantity > 0 &&
